@@ -13,5 +13,3 @@ target_link_libraries(keyer pico_stdlib)
 
 # create map/bin/hex file etc.
 pico_add_extra_outputs(keyer)
-
-#target_link_libraries( modemmqtt pico_stdlib pico_util hardware_i2c hardware_rtc hardware_flash hardware_sync )
