@@ -31,6 +31,6 @@ These converter modules are commonly and inexpensively available.
 If an RPi is used as the input computer, one of it's UARTs may
 be used and directly wired into the Pico on pins 1 (TX) and 2 (RX).
 
-Power the pico on pins 1 (VSYS) and 3 (GND) with a well-regulated 
+Power the pico on pins 2 (VSYS) and 3 (GND) with a well-regulated 
 +5V DC.  That same source can supply the V+ for the UART to RS-232
 converter module (if used).
