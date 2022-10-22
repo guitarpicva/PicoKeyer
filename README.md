@@ -1,3 +1,4 @@
+Copyright 2022 GrizzWorks, LLC - All Rights Reserved
 Pico Keyer
 
 Pico Keyer is a simple Morse code keyer project to demonstrate
