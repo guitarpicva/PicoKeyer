@@ -1,5 +1,10 @@
 Copyright 2022 GrizzWorks, LLC - All Rights Reserved
+
 Pico Keyer
+
+PicoKeyer is shared in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
 Pico Keyer is a simple Morse code keyer project to demonstrate
 how to use a GPIO on the RPi Pico microcontroller to key a radio 
