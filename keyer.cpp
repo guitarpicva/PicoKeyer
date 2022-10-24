@@ -35,6 +35,7 @@ bool b_fullcmd = false;
 std::queue<char> tokey; // input byte queue from the DATA UART
 char inbyte, keychar, kc;
 int j = 0; // string loop counter
+
 void loop() {        
     // here is where we continually read the serial port
     // for ascii to convert to Morse and manage the GPIO
@@ -42,7 +43,7 @@ void loop() {
     // line terminator, so we build a vector of chars
     // and then send each one to the KEYER GPIO when the user
     // sends the Carriage Return
-    while((b_fullcmd == false) && (uart_is_readable(DATA))) {
+    while(uart_is_readable(DATA)) {
       // read the byte, store it and look out for CR (0x0D)
       inbyte = uart_getc(DATA);
       printf("%c", inbyte); // debug echo so we can see exactly what was sent from UART
@@ -122,7 +123,7 @@ int main() {
     // set mode to OUTPUT
     gpio_set_dir(KEYER, GPIO_OUT);
     // set pull-ups to avoid float keying
-    // and always leave the GPIO pin in high state when finished
+    // and always leave the GPIO pin in low state when finished
     gpio_set_pulls(KEYER, true, true);
     gpio_put(KEYER, 1); // one flash at start so set to ON
     sleep_ms(500); // on duration ms
