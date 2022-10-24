@@ -16,7 +16,7 @@ drive a keying circuit or a key input to a radio directly.
 It is left to the user to decide if a keying circuit is necessary
 but it is highly recommended.  A simple transistor switch,
 such as a 2N2222A with an appropriate bias resistor connected
-between the he GPIO pin and the transistor's base is likely all that
+between the GPIO pin and the transistor's base is likely all that
 would be needed as a transistor switch between ground and the
 radio's key line.  If clicking is encountered in the RF output, 
 the use of an opto-isolated transistor may be necessary.  A 
