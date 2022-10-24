@@ -24,8 +24,13 @@ device such as a 4N25 or VO610A may be appropriate.
 
 The keying is treated as one would use a "straight key", meaning
 a simple on/off switch (a telegraph key).  Thus the radio settings
-should be for usign a straight key and key jack wiring as
-required by the radio manufacturer.
+should be for using a straight key and key jack wiring as
+required by the radio manufacturer.  The "tip" of the radio's key
+jack would be connected to the Emitter of the transistor switch,
+and the Ground of the radio's key jack would be connected to the
+Collector of the transistor switch.  So when the GPIO pin turns
+the transistor switch to ON, the key line will be grounded and
+the radio will be keyed.
 
 Future designs may also include an "iambic" keyer for radios 
 which have electronic keyers built into them.  In effect, this 
