@@ -4,6 +4,8 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 #include <stdio.h>
+#include <cstring>
+#include <cstdlib>
 #include "pico/stdlib.h"
 #include "hardware/uart.h"
 #include "hardware/gpio.h"
@@ -56,17 +58,31 @@ void loop() {
       //printf("Full Cmd\r\n");
       // here we process the full command from the UART
       // and key the transmitter via GPIO KEYER
-      int end = tokey.size(); // so when we pop this doesn't change
+      const int end = tokey.size(); // so when we pop this doesn't change
       for(uint i = 0; i < end; i++) {        
         keychar = tokey.front();
-        tokey.pop();
-        char * keystr = alphabet[keychar]; // look up the keying pattern by ASCII char value
+        if(keychar == '@') {
+          // this is a speed command so take the next two digits the WPM speed
+          tokey.pop(); // pop the @
+          int paris = atoi(&tokey.front());  // represents 0x00 terminated string pointer
+          if(paris < 5) paris = 5;
+          printf("\r\n%02d %2f", paris, 1200/paris);
+          dit = (int) 1200/paris;
+          continue;
+        } 
+        tokey.pop(); // removed last used item
+        char * keystr = alphabet[keychar]; // look up the keying pattern by ASCII char value       
         if(keystr == "") {
           sleep_ms(dit * 3);
           continue; // skip the unknown char
         }
+        if(keystr == " ") {
+          printf(" ");
+          sleep_ms(dit * 6); // inter-word space = 7, so 1 dit time from end of word + 6 * dit times
+          continue;
+        }
         // one string of dits and dahs makes ONE character          
-        printf("%s\r\n", keystr);
+        printf("%s", &keychar);
         j = 0; // index in keystr
         kc = keystr[j]; // DIT or DAH
         while (kc != 0x00) { 
@@ -105,13 +121,12 @@ int main() {
     gpio_init(KEYER); // sets GPIO function to SIO
     // set mode to OUTPUT
     gpio_set_dir(KEYER, GPIO_OUT);
-    // set pull-up to avoid float keying
+    // set pull-ups to avoid float keying
     // and always leave the GPIO pin in high state when finished
     gpio_set_pulls(KEYER, true, true);
-    gpio_put(KEYER, 1);
-    sleep_ms(500); // one flash
-    // set the GPIO to low KEY OFF
-    gpio_put(KEYER, 0);
+    gpio_put(KEYER, 1); // one flash at start so set to ON
+    sleep_ms(500); // on duration ms
+    gpio_put(KEYER, 0); // set the GPIO to low KEY OFF
     // Start the main loop    
     while (true) {
         loop();

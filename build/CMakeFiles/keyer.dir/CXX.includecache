@@ -11,6 +11,10 @@
 /home/pi/pico/PicoKeyer/keyer.cpp
 stdio.h
 -
+cstring
+-
+cstdlib
+-
 pico/stdlib.h
 /home/pi/pico/PicoKeyer/pico/stdlib.h
 hardware/uart.h
@@ -199,10 +203,6 @@ sys/cdefs.h
 -
 pico/types.h
 /home/pi/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/pico/types.h
-
-/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp
-cstdlib
--
 
 /home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/include/pico/stdio.h
 pico.h

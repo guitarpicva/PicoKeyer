@@ -15,8 +15,8 @@ drive a keying circuit or a key input to a radio directly.
 
 It is left to the user to decide if a keying circuit is necessary
 but it is highly recommended.  A simple transistor switch,
-such as a 2N3904 with an appropriate bias resistor connected
-between the he GPIO and the transistor's base is likely all that
+such as a 2N2222A with an appropriate bias resistor connected
+between the he GPIO pin and the transistor's base is likely all that
 would be needed.  If clicking is encountered in the RF output, 
 the use of an opto-isolated transistor may be necessary.  A 
 device such as a 4N25 or VO610A may be appropriate.
@@ -26,10 +26,11 @@ used as the input device.  Characters are echo'd back on the
 UART so the user may see what has been typed into the Serial
 terminal or UI application.  This necessitates a UART to RS-232
 converter and any associated adapters in order to use USB ports.
-These converter modules are commonly and inexpensively available.
+These converter modules are commonly and inexpensively 
+(< $1 - $3 US) available.
 
 If an RPi is used as the input computer, one of it's UARTs may
-be used and directly wired into the Pico on pins 1 (TX) and 2 (RX).
+be directly wired into the Pico on pins 1 (TX) and 2 (RX).
 
 Power the pico on pins 2 (VSYS) and 3 (GND) with a well-regulated 
 +5V DC.  That same source can supply the V+ for the UART to RS-232
