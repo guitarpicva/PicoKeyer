@@ -57,3 +57,13 @@ be directly wired into the Pico on pins 1 (TX) and 2 (RX).
 Power the pico on pins 39 (VSYS) and 38 (GND) with a well-regulated 
 +5V DC.  That same source can supply the V+ for the UART to RS-232
 converter module (if used).
+
+Speed of keying is specified by an input command to the Pico UART.
+The format "@nn" is used to set the keying speed to "nn" words
+per minute based on the formula for WPM using the "PARIS " word
+methodology.  The formula is :  T = 1200 / W where
+T = time for a single "dot" in milliseconds
+W = "PARIS " Words per minute
+
+When the users sends "@12" for example, the keyer will adjust it's
+"dot" time to 1200/12 = 100 ms
