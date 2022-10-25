@@ -7,7 +7,8 @@ pico_sdk_init()
 add_executable(
   keyer keyer.cpp
 )
-
+pico_enable_stdio_usb(keyer 1)
+pico_enable_stdio_uart(keyer 1)
 # pull in common dependencies
 target_link_libraries(keyer pico_stdlib)
 

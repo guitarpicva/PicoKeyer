@@ -17,8 +17,6 @@ cstdlib
 -
 pico/stdlib.h
 /home/pi/pico/PicoKeyer/pico/stdlib.h
-hardware/uart.h
-/home/pi/pico/PicoKeyer/hardware/uart.h
 hardware/gpio.h
 /home/pi/pico/PicoKeyer/hardware/gpio.h
 queue
@@ -213,6 +211,10 @@ pico/stdio.h
 /home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/include/pico/pico/stdio.h
 hardware/uart.h
 /home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/include/pico/hardware/uart.h
+
+/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h
+pico/stdio.h
+/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/pico/stdio.h
 
 generated/pico_base/pico/config_autogen.h
 /home/pi/pico/pico-sdk/src/boards/include/boards/pico.h
