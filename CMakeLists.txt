@@ -13,8 +13,10 @@ pico_enable_stdio_usb(keyer 1)
 
 # for using UART as serial input instead of USB above
 # changes must also be made in the code, and they are 
-# also commented out as a guide
-# pico_enable_stdio_uart(keyer 1) 
+# also commented out as a guide, so to enable the UART
+# (stdio default) set the final parameter to 1
+#pico_enable_stdio_uart(keyer 1) 
+pico_enable_stdio_uart(keyer 0) 
 
 # pull in common dependencies
 target_link_libraries(keyer pico_stdlib)

@@ -88,7 +88,7 @@ void loop() {
           tokey.pop(); // pop the @
           int paris = atoi(&tokey.front());  // represents 0x00 terminated string pointer
           if(paris < 5) paris = 5;
-          printf("\r\n%02d %dms\r\n", paris, 1200/paris);
+          printf("\r\n%02d WPM %dms dot\r\n", paris, 1200/paris);
           dit = (int) 1200/paris;
           b_keyit = false; // only flash the LED
           continue;

@@ -1697,33 +1697,6 @@ home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/keyer.dir/build.make CMakeFiles/keyer.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
 .PHONY : home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
 
-home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.obj: home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
-
-.PHONY : home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.obj
-
-# target to build an object file
-home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/keyer.dir/build.make CMakeFiles/keyer.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
-.PHONY : home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
-
-home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.i: home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i
-
-.PHONY : home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.i
-
-# target to preprocess a source file
-home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/keyer.dir/build.make CMakeFiles/keyer.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i
-.PHONY : home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i
-
-home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.s: home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s
-
-.PHONY : home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.s
-
-# target to generate assembly for a file
-home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/keyer.dir/build.make CMakeFiles/keyer.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s
-.PHONY : home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s
-
 home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.obj: home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
 
 .PHONY : home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.obj
@@ -2066,9 +2039,6 @@ help:
 	@echo "... home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.obj"
 	@echo "... home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.i"
 	@echo "... home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.s"
-	@echo "... home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.obj"
-	@echo "... home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.i"
-	@echo "... home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.s"
 	@echo "... home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.obj"
 	@echo "... home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.i"
 	@echo "... home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.s"

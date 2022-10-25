@@ -206,12 +206,6 @@ pico/types.h
 pico.h
 /home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/include/pico/pico.h
 
-/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/include/pico/stdio_uart.h
-pico/stdio.h
-/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/include/pico/pico/stdio.h
-hardware/uart.h
-/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/include/pico/hardware/uart.h
-
 /home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h
 pico/stdio.h
 /home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/pico/stdio.h
