@@ -31,7 +31,8 @@ const uint LED = PICO_DEFAULT_LED_PIN;
 // Morse standard timings, we'll set dit to determine the speed
 uint dit = 80u; // dit length ms
 
-bool b_fullcmd = false;
+bool b_fullcmd = false; // we have gathered a full command from the USB
+bool b_keyit = true; // true send OTA, false, only flash LED
 std::queue<char> tokey; // input byte queue from the DATA UART
 char inbyte, keychar, kc;
 int j = 0; // string loop counter
@@ -76,19 +77,21 @@ void loop() {
       //printf("Full Cmd\r\n");
       // here we process the full command from the UART
       // and key the transmitter via GPIO KEYER
+      b_keyit = true; // send this data over the air
       const int end = tokey.size(); // so when we pop this doesn't change
       for(uint i = 0; i < end; i++) {        
         keychar = tokey.front();
-        tokey.pop(); // remove last used item        
         if(keychar == '@') {
-          // this is a speed command so take the next two digits the WPM speed
+          // this is a speed command so take the rest of the digits the WPM speed
           tokey.pop(); // pop the @
           int paris = atoi(&tokey.front());  // represents 0x00 terminated string pointer
           if(paris < 5) paris = 5;
           printf("\r\n%02d %d ms", paris, 1200/paris);
           dit = (int) 1200/paris;
+          b_keyit = false; // only flash the LED
           continue;
         } 
+        tokey.pop(); // remove last used item                
         char * keystr = alphabet[keychar]; // look up the keying pattern by ASCII char value       
         if(keystr == "") {
           sleep_ms(dit * 3);
@@ -104,7 +107,7 @@ void loop() {
         j = 0; // index in keystr
         kc = keystr[j]; // DIT or DAH
         while (kc != 0x00) { 
-          gpio_put(KEYER, 1); // key on
+          if(b_keyit) gpio_put(KEYER, 1); // key on
           gpio_put(LED, 1);
           if(kc == '.') {
             sleep_ms(dit); // a DIT length
@@ -112,7 +115,7 @@ void loop() {
           else {
             sleep_ms(dit * 3); // DAH is 3 dit lengths
           }
-          gpio_put(KEYER, 0); // key off
+          if(b_keyit) gpio_put(KEYER, 0); // key off
           gpio_put(LED, 0);
           sleep_ms(dit); // intra-key delay
           j++;
