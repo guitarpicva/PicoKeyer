@@ -8,7 +8,7 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
 Pico Keyer is a simple Morse code keyer project to demonstrate
 how to use a GPIO on the RPi Pico microcontroller to key a radio 
-or code practice oscillator.  GPIO voltage on High is +3.3V.
+or code practice oscillator.  GPIO voltage when turned ON is +3.3V.
 
 The "build" folder has been included with the binary .uf2 file
 for evaluation convenience.  The ".vscode" folder is also 
