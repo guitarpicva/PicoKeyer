@@ -1222,9 +1222,9 @@ Discarded input sections
                 0x0000000000000000       0x80 CMakeFiles/keyer.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
  .time_critical.flash_range_program
                 0x0000000000000000       0x80 CMakeFiles/keyer.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
- .text          0x0000000000000000        0x0 /tmp/cc0Dj3Ko.o
- .data          0x0000000000000000        0x0 /tmp/cc0Dj3Ko.o
- .bss           0x0000000000000000        0x0 /tmp/cc0Dj3Ko.o
+ .text          0x0000000000000000        0x0 /tmp/ccOTRtLT.o
+ .data          0x0000000000000000        0x0 /tmp/ccOTRtLT.o
+ .bss           0x0000000000000000        0x0 /tmp/ccOTRtLT.o
  .text          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libstdc++.a(functexcept.o)
  .data          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libstdc++.a(functexcept.o)
  .bss           0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libstdc++.a(functexcept.o)
@@ -5639,7 +5639,7 @@ LOAD /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp
 .boot2          0x0000000010000000      0x100
                 0x0000000010000000                __boot2_start__ = .
  *(.boot2)
- .boot2         0x0000000010000000      0x100 /tmp/cc0Dj3Ko.o
+ .boot2         0x0000000010000000      0x100 /tmp/ccOTRtLT.o
                 0x0000000010000100                __boot2_end__ = .
                 0x0000000000000001                ASSERT (((__boot2_end__ - __boot2_start__) == 0x100), ERROR: Pico second stage bootloader must be 256 bytes in size)
 
@@ -7329,7 +7329,7 @@ LOAD CMakeFiles/keyer.dir/home/pi/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo
 LOAD CMakeFiles/keyer.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj
 LOAD CMakeFiles/keyer.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
 LOAD CMakeFiles/keyer.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
-LOAD /tmp/cc0Dj3Ko.o
+LOAD /tmp/ccOTRtLT.o
 LOAD /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libstdc++.a
 LOAD /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libm.a
 START GROUP
@@ -7451,7 +7451,7 @@ LOAD linker stubs
  .ARM.attributes
                 0x000000000000082c       0x2c CMakeFiles/keyer.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
  .ARM.attributes
-                0x0000000000000858       0x22 /tmp/cc0Dj3Ko.o
+                0x0000000000000858       0x22 /tmp/ccOTRtLT.o
  .ARM.attributes
                 0x000000000000087a       0x2c /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libstdc++.a(functexcept.o)
  .ARM.attributes
