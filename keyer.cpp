@@ -77,20 +77,24 @@ void loop() {
       //printf("Full Cmd\r\n");
       // here we process the full command from the UART
       // and key the transmitter via GPIO KEYER
+      printf("\r\n");
       b_keyit = true; // send this data over the air
       const int end = tokey.size(); // so when we pop this doesn't change
       for(uint i = 0; i < end; i++) {        
         keychar = tokey.front();
+        
         if(keychar == '@') {
           // this is a speed command so take the rest of the digits the WPM speed
           tokey.pop(); // pop the @
           int paris = atoi(&tokey.front());  // represents 0x00 terminated string pointer
           if(paris < 5) paris = 5;
-          printf("\r\n%02d %d ms", paris, 1200/paris);
+          printf("\r\n%02d %dms\r\n", paris, 1200/paris);
           dit = (int) 1200/paris;
           b_keyit = false; // only flash the LED
           continue;
         } 
+        printf("%c", (int)keychar);
+        
         tokey.pop(); // remove last used item                
         char * keystr = alphabet[keychar]; // look up the keying pattern by ASCII char value       
         if(keystr == "") {
@@ -98,12 +102,11 @@ void loop() {
           continue; // skip the unknown char
         }
         if(keystr == " ") {
-          printf(" ");
+          printf("%s", " ");
           sleep_ms(dit * 6); // inter-word space = 7, so 1 dit time from end of word + 6 * dit times
           continue;
         }
         // one string of dits and dahs makes ONE character          
-        printf("%s", &keychar);
         j = 0; // index in keystr
         kc = keystr[j]; // DIT or DAH
         while (kc != 0x00) { 
@@ -129,7 +132,6 @@ void loop() {
 
 int main() {
     stdio_init_all();
-    sleep_ms(1000); // give it a sec to catch up before printf's begin
     
     // // Set up the DATA UART interface
     // uart_init(DATA, DATA_BAUD);
@@ -144,6 +146,9 @@ int main() {
 
     // Set up the USB as the stdio interface
     stdio_usb_init();
+    sleep_ms(1000); // give it a sec to catch up before printf's begin
+    
+    while(!stdio_usb_connected) {;}
     // initialize GPIO as the output pin
     gpio_init(KEYER); // sets GPIO function to SIO
     gpio_init(LED);
