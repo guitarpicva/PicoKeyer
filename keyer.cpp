@@ -79,6 +79,7 @@ void loop() {
       const int end = tokey.size(); // so when we pop this doesn't change
       for(uint i = 0; i < end; i++) {        
         keychar = tokey.front();
+        tokey.pop(); // remove last used item        
         if(keychar == '@') {
           // this is a speed command so take the next two digits the WPM speed
           tokey.pop(); // pop the @
@@ -88,7 +89,6 @@ void loop() {
           dit = (int) 1200/paris;
           continue;
         } 
-        tokey.pop(); // removed last used item
         char * keystr = alphabet[keychar]; // look up the keying pattern by ASCII char value       
         if(keystr == "") {
           sleep_ms(dit * 3);
