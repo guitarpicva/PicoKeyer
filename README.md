@@ -63,7 +63,7 @@ The format "@nn" is used to set the keying speed to "nn" words
 per minute based on the formula for WPM using the "PARIS " word
 methodology.  The formula is :  T = 1200 / W where
 T = time for a single "dot" in milliseconds and W = "PARIS " 
-Words per minute
+Words per minute.
 
 When the users sends "@12" for example, the keyer will adjust it's
 "dot" time to 1200/12 = 100 ms
