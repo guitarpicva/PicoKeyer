@@ -51,6 +51,7 @@ void loop() {
       if(inbyte == CR) {
         b_fullcmd = true; // we got the frame end ok
         //printf("\r\nQUEUE: %d", tokey.size());
+        break;
       }
       else { // add to the queue
         tokey.emplace(inbyte); // in place push with no copying        
@@ -74,7 +75,7 @@ void loop() {
     //   }
     // }
     if(b_fullcmd == true) { // should be a fully formed sentence to key
-      //printf("Full Cmd\r\n");
+      printf("Full Cmd\r\n");
       // here we process the full command from the UART
       // and key the transmitter via GPIO KEYER
       printf("\r\n");
