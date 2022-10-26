@@ -47,7 +47,7 @@ void loop() {
     while(uart_is_readable(DATA)) {
       // read the byte, store it and look out for CR (0x0D)
       inbyte = uart_getc(DATA);
-      printf("%c", inbyte); // debug echo so we can see exactly what was sent from UART
+      //printf("%c", inbyte); // debug echo so we can see exactly what was sent from UART
       if(inbyte == CR) {
         b_fullcmd = true; // we got the frame end ok
         //printf("\r\nQUEUE: %d", tokey.size());
@@ -89,9 +89,9 @@ void loop() {
           tokey.pop(); // pop the @
           int paris = atoi(&tokey.front());  // represents 0x00 terminated string pointer
           if(paris < 5) paris = 5;
-          printf("%02d WPM %dms dot\r\n", paris, 1200/paris);
           dit = (int) 1200/paris;
-          b_keyit = false; // only flash the LED
+          printf("%02d WPM %dms dot\r\n", paris, dit);
+          //b_keyit = false; // only flash the LED
           while(tokey.size() > 0) { // empty this vector
             tokey.pop();
           }

@@ -6,6 +6,11 @@ PicoKeyer is shared in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
+------------------------------------------------------------------
+NOTE: See the guitarpicva/PicoKeyerTerminal.git project
+on github for a simple serial terminal to use with the keyer.
+------------------------------------------------------------------
+
 Pico Keyer is a simple Morse code keyer project to demonstrate
 how to use a GPIO on the RPi Pico microcontroller to key a radio 
 or code practice oscillator.  GPIO voltage when turned ON is +3.3V.
