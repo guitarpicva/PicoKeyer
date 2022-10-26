@@ -1,6 +1,6 @@
 Copyright 2022 GrizzWorks, LLC - All Rights Reserved
 
-Pico Keyer
+Pico Keyer - for use with RPi USB connection
 
 PicoKeyer is shared in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
