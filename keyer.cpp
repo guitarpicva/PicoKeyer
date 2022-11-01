@@ -38,6 +38,7 @@
 #define DATA_BAUD 115200u
 
 // Use the on-board Pico LED to display ready and report speed changes
+// the same GPIO pin number is used for Pico and XIAO RP2040 (25)
 const uint LED = PICO_DEFAULT_LED_PIN;
 // Morse standard timing is Dot = 1, Dash = 3, Between dots/dashes = 1, between letters = 3, and between words = 7
 // Wet dit (dot) time to determine the speed
