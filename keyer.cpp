@@ -16,20 +16,29 @@
 #define CR 13u
 // // the data will reside on UART 0 at phys. pins 1 (TX) and 2 (RX)
 #define DATA uart0
+// NOTE: to build for the Seeed XIAO 2040 define XIAO2040 below,
+// otherwise it will build for the RaspberryPi Pico
+#ifdef XIAO2040
+// physical pin 6 on in XIAO 2040
+#define UART_DATA_TX_PIN 6u
+// physical pin 7 on the XIAO
+#define UART_DATA_RX_PIN 7u
+#define KEYER 8u //physical pin 8 on the XIAO to key radio/oscillator
+#else
 // physical pin 1 on the Pico
 #define UART_DATA_TX_PIN 0u
 // physical pin 2 on the Pico
 #define UART_DATA_RX_PIN 1u
+#define KEYER 6u // physical pin 9 on the Pico to key radio/oscillator
+#endif
 // modem baud rate
 #define DATA_BAUD 115200u
-// keyer GPIO pin
-// change KEYER to a GPIO pin number to use as a 
-// radio/oscillator keyer
-#define KEYER 6u // physical pin 9 on the Pico
-// to test the code, we just use the on-board Pico LED
+
+// Use the on-board Pico LED to display ready and report speed changes
 const uint LED = PICO_DEFAULT_LED_PIN;
-// Morse standard timings, we'll set dit to determine the speed
-uint dit = 80u; // dit length ms which is 15 WPM
+// Morse standard timing is Dot = 1, Dash = 3, Between dots/dashes = 1, between letters = 3, and between words = 7
+// Wet dit (dot) time to determine the speed
+uint dit = 80u; // dit length ms which is 80 ms dir = 15 PARIS WPM
 
 bool b_fullcmd = false; // we have gathered a full command from the USB
 bool b_keyit = true; // true send OTA, false, only flash LED
