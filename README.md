@@ -14,11 +14,19 @@ on github for a simple serial terminal to use with the keyer.
 Pico Keyer is a simple Morse code keyer project to demonstrate
 how to use a GPIO on the RPi Pico microcontroller to key a radio 
 or code practice oscillator.  GPIO voltage when turned ON is +3.3V.
+This GPIO voltage can be used to drive a transistor keying circuit.
+See ELECTRONICS.md for more information.
 
 The "build" folder has been included with the binary .uf2 file
-for evaluation convenience.  The ".vscode" folder is also 
-included for those who wish to build the project in VS Code
-themselves.
+for evaluation convenience and for use with the RPi Pico ONLY.
+The ".vscode" folder is also included for those who wish to build 
+the project in VS Code themselves.
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+To build for the Seeed XIAO RP2040 device #define XIAO2040 at 
+the top of keyer.cpp.
+This uses pin 6 for UART TX, pin 7 for UART RX and pin 8 for GPIO KEYER
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 The Pico's onboard LED is keyed to demonstrate the keyed letter 
 and punctuation and prosigns.  See alphabet.h for the full list 

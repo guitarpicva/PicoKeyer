@@ -14,22 +14,25 @@
 
 // Carriage Return is the send trigger via UART
 #define CR 13u
-// // the data will reside on UART 0 at phys. pins 1 (TX) and 2 (RX)
+// // the data will reside on UART 0
 #define DATA uart0
-// NOTE: to build for the Seeed XIAO 2040 define XIAO2040 below,
+// NOTE: to build for the Seeed XIAO RP2040 define XIAO2040 here,
+#undef XIAO2040
 // otherwise it will build for the RaspberryPi Pico
 #ifdef XIAO2040
 // physical pin 6 on in XIAO 2040
 #define UART_DATA_TX_PIN 6u
 // physical pin 7 on the XIAO
 #define UART_DATA_RX_PIN 7u
-#define KEYER 8u //physical pin 8 on the XIAO to key radio/oscillator
+//physical pin 8 on the XIAO to key radio/oscillator
+#define KEYER 8u 
 #else
 // physical pin 1 on the Pico
 #define UART_DATA_TX_PIN 0u
 // physical pin 2 on the Pico
 #define UART_DATA_RX_PIN 1u
-#define KEYER 6u // physical pin 9 on the Pico to key radio/oscillator
+// physical pin 9 on the Pico to key radio/oscillator
+#define KEYER 6u 
 #endif
 // modem baud rate
 #define DATA_BAUD 115200u
