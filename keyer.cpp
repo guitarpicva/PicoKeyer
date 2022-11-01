@@ -17,15 +17,15 @@
 // // the data will reside on UART 0 at phys. pins 1 (TX) and 2 (RX)
 #define DATA uart0
 // physical pin 1 on the Pico
-#define UART_DATA_TX_PIN 6u
+#define UART_DATA_TX_PIN 0u
 // physical pin 2 on the Pico
-#define UART_DATA_RX_PIN 7u
+#define UART_DATA_RX_PIN 1u
 // modem baud rate
 #define DATA_BAUD 115200u
 // keyer GPIO pin
 // change KEYER to a GPIO pin number to use as a 
 // radio/oscillator keyer
-#define KEYER 8u // physical pin 9 on the Pico
+#define KEYER 6u // physical pin 9 on the Pico
 // to test the code, we just use the on-board Pico LED
 const uint LED = PICO_DEFAULT_LED_PIN;
 // Morse standard timings, we'll set dit to determine the speed
