@@ -6,8 +6,9 @@ In order to build a suitable keyer "kit", let us take a look at
 what components will be necessary.
 
 1. Small enclosure.  The enclosure would contain the RPi Pico
-device, a very small MAX232 UART to Serial converter module,
-and some wires to connect them all together.
+device, a very small MAX232 UART to Serial converter module, a
+switching transistor such as the 2N2222A, a bias resistor for 
+the transistor switch, and some wires to connect them all together.
 
 2. The UART to RS-232 converter board can be quite small, on the
 order of 3/8" x 5/8" in size.  There are 6 wires which must be 
