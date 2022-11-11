@@ -1,7 +1,7 @@
 // lookup table for the Morse alphabet covers ASCII 0-127 (0x00 - 0x7f)
 char *alphabet[] = { 
 (char *)(""), (char *)(""), (char *)(""), (char *)(""), (char *)(""), (char *)(""), (char *)(""), (char *)(""), (char *)(""), (char *)(""), (char *)(""), (char *)(""), (char *)(""), (char *)(""), (char *)(""), (char *)(""), (char *)(""), (char *)(""), (char *)(""), (char *)(""), (char *)(""),   //unused (20)
-(char *)(""), (char *)(""), (char *)(""), (char *)(""), (char *)(""), (char *)(""), (char *)(""), (char *)(""), (char *)(""), (char *)(""), (char *)(""), (char *)(""), (char *)(""), (char *)(""), (char *)(""), (char *)(""), (char *)(""...-.-), (char *)(""), (char *)(""), (char *)(""), (char *)(""),   //unused (20) // unused (41) (SPACE is 32)
+(char *)(""), (char *)(""), (char *)(""), (char *)(""), (char *)(""), (char *)(""), (char *)(""), (char *)(""), (char *)(""), (char *)(""), (char *)(""), (char *)(""), (char *)(""), (char *)(""), (char *)(""), (char *)(""), (char *)("...-.-"), (char *)(""), (char *)(""), (char *)(""), (char *)(""),   //unused (20) // unused (41) (SPACE is 32)
 (char *)(""), (char *)("-.--."), (char *)("--..--"), (char *)("-....-"), (char *)(".-.-.-"), (char *)("-..-."),  // Punctuation: + (KN) , - . / (47)
 (char *)("-----"), (char *)(".----"), (char *)("..---"), (char *)("...--"), (char *)("....-"), (char *)("....."), (char *)("-...."), (char *)("--..."), (char *)("---.."), (char *)("----."), // 0-9 (57)
 (char *)(""), (char *)(""), (char *)(""), (char *)("-...-"), (char *)(".-.-."), (char *)("..--.."), (char *)(""),// Punctuation:  = (BT) > (AR) ? . (64)
