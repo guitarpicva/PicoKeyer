@@ -2,9 +2,9 @@
 char *alphabet[] = { 
 (char *)(""), (char *)(""), (char *)(""), (char *)(""), (char *)(""), (char *)(""), (char *)(""), (char *)(""), (char *)(""), (char *)(""), (char *)(""), (char *)(""), (char *)(""), (char *)(""), (char *)(""), (char *)(""), (char *)(""), (char *)(""), (char *)(""), (char *)(""), (char *)(""),   //unused (20)
 (char *)(""), (char *)(""), (char *)(""), (char *)(""), (char *)(""), (char *)(""), (char *)(""), (char *)(""), (char *)(""), (char *)(""), (char *)(""), (char *)(""), (char *)(""), (char *)(""), (char *)(""), (char *)(""), (char *)(""), (char *)(""), (char *)(""), (char *)(""), (char *)(""),   //unused (20) // unused (41) (SPACE is 32)
-(char *)(""), (char *)(".-.-."), (char *)("--..--"), (char *)("-....-"), (char *)("..--.."), (char *)("-..-."),  // Punctuation: + (AR) , - . / (47)
+(char *)(""), (char *)("-.--."), (char *)("--..--"), (char *)("-....-"), (char *)(".-.-.-"), (char *)("-..-."),  // Punctuation: + (KN) , - . / (47)
 (char *)("-----"), (char *)(".----"), (char *)("..---"), (char *)("...--"), (char *)("....-"), (char *)("....."), (char *)("-...."), (char *)("--..."), (char *)("---.."), (char *)("----."), // 0-9 (57)
-(char *)(""), (char *)(""), (char *)(""), (char *)("-...-"), (char *)(""), (char *)(".-.-.-"), (char *)(""),// Punctuation:  = (BT) ? (64)
+(char *)(""), (char *)(""), (char *)(""), (char *)("-...-"), (char *)(".-.-."), (char *)("..--.."), (char *)(""),// Punctuation:  = (BT) > (AR) ? . (64)
 (char *)(".-"), (char *)("-..."), (char *)("-.-."), (char *)("-.."), (char *)("."), (char *)("..-."), (char *)("--."), (char *)("...."), (char *)(".."), // A-I (73)
 (char *)(".---"), (char *)("-.-"), (char *)(".-.."), (char *)("--"), (char *)("-."), (char *)("---"), (char *)(".--."), (char *)("--.-"), (char *)(".-."), // J-R (82)
 (char *)("..."), (char *)("-"), (char *)("..-"), (char *)("...-"), (char *)(".--"), (char *)("-..-"), (char *)("-.--"), (char *)("--.."), // S-Z (90)

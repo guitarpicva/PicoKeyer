@@ -160,7 +160,7 @@ int main() {
     // DATA Physical Pico Pins 1, 2 (GPIO0, GPIO1)
     gpio_set_function(UART_DATA_TX_PIN, GPIO_FUNC_UART);
     gpio_set_function(UART_DATA_RX_PIN, GPIO_FUNC_UART);
-
+    stdio_uart_init();
     // Set up the USB as the stdio interface
     //stdio_usb_init();
 
