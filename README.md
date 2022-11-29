@@ -47,9 +47,9 @@ The keying is treated as one would use a "straight key", meaning
 a simple on/off switch (a telegraph key).  Thus the radio settings
 should be for using a straight key and key jack wiring as
 required by the radio manufacturer.  Typically, the "tip" of the 
-radio's key jack would be connected to the Emitter of the transistor 
+radio's key jack would be connected to the Collector of the transistor 
 switch, and the Ground of the radio's key jack would be connected 
-to the Collector of the transistor.  So when the GPIO pin turns
+to the Emitter of the transistor.  So when the GPIO pin turns
 the transistor switch to ON, the key line will be grounded and
 the radio will be keyed.  The above demonstrates the most common
 radio keying implementation in radios or code practice oscillators.
