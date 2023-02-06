@@ -105,10 +105,9 @@ void loop() {
           dit = (int) 1200/paris;
           printf("%02d WPM %dms dot\r\n", paris, dit);
           //b_keyit = false; // only flash the LED
-          // while(tokey.size() > 0) { // empty this vector
-          //   tokey.pop();
-          // }
-          tokey.clear();
+          while(tokey.size() > 0) { // empty this vector
+            tokey.pop();
+          }
           break;
         } 
         printf("%c", (int)keychar);
